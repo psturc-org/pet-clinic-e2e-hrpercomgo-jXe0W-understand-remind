@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: quarkus-component-e2e-dehutgdial
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: java-quarkus2
+    app.kubernetes.io/part-of: pet-clinic-e2e-hrpercomgo
+  name: quarkus-component-e2e-dehutgdial
+  namespace: has-e2e-vwts
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: quarkus-component-e2e-dehutgdial
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: quarkus-component-e2e-dehutgdial
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload:has-e2e-vwts-quarkus-component-e2e-dehutgdial
+        imagePullPolicy: Always
+        name: container-image
+        resources: {}
+status: {}
